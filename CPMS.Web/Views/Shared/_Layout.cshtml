@@ -1,0 +1,128 @@
+﻿@using CPMS.BL
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/cpms.js"></script>
+</head>
+<body class="body">
+    <div class="navbar navbar-fixed-top">
+        <div class="mainheader">
+            <div class="navbar-header">
+                @Html.ActionLink("Carparking Management System V6", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <div class="mainNav">
+        <ul>
+            <li>
+                <div class="">
+                    <div class="">
+                        <div class="panel-group" id="mainmenu">
+                            <div class="panel panel-primary">
+                                <div class="panel panel-heading">
+                                    <h1 class="panel-title">
+                                        <a href="#SystemInfo"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu">
+                                            <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
+                                            Systems
+                                        </a>
+                                        <a href="#SystemInfo"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu"
+                                           class="panel-toggle"></a>
+                                    </h1>
+                                </div>
+                                <div id="SystemInfo" class="panel-collapse collapse">
+                                    <div class="menu panel-body">
+                                        <ul>
+                                            <li><a href="#">Entity</a></li>
+                                            <li><a href="#">Location</a></li>
+                                            <li><a href="#">Ip Camera</a></li>
+                                            <li><a href="#">Vehicle</a></li>
+                                            <li><a href="#">CardType</a></li>
+                                            <li><a href="#">SmartCard</a></li>
+                                            <li><a href="#">Parking Rate</a></li>
+                                            <li><a href="#">Discount</a></li>
+                                            <li><a href="#">Parking Monitor</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel panel-heading">
+                                    <h1 class="panel-title">
+                                        <a href="#useraccounts"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu">
+                                           <i class="fa fa-users fa-fw" aria-hidden="true"></i>
+                                            User Accounts
+                                        </a>
+                                        <a href="#useraccounts"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu"
+                                           class="panel-toggle"></a>
+                                    </h1>
+                                </div>
+                                <div id="useraccounts" class="panel-collapse collapse">
+                                    <div class="menu panel-body">
+                                        <ul>
+                                            <li><a href="@Url.Action("Index","UserAccount", new {accountType = UserAccountType.Admin })">Administrator</a></li>
+                                            <li><a href="@Url.Action("Index","UserAccount", new {accountType = UserAccountType.Cashier })">Cashier</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel panel-heading">
+                                    <h1 class="panel-title">
+                                        <a href="#reports"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu">
+                                            <i class="fa fa-pie-chart fa-fw" aria-hidden="true"></i>
+                                            Reports
+                                        </a>
+                                        <a href="#reports"
+                                           data-toggle="collapse"
+                                           data-parent="#mainmenu"
+                                           class="panel-toggle"></a>
+                                    </h1>
+                                </div>
+                                <div id="reports" class="panel-collapse collapse">
+                                    <div class="menu panel-body">
+                                        <ul>
+                                            <li><a href="#">Sales Report</a></li>
+                                            <li><a href="#">Transaction</a></li>
+                                            <li><a href="#">POS Transaction Log</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        <div class="panel">
+            <footer class="footer panel-footer">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

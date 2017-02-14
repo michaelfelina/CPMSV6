@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CPMS.BL.UserAccount>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.AccountType</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table table-responsive">
+    <table class="">
+        <tr class="">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValidFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValidTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateUpdated)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValidFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValidTo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Remarks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateAdded)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateUpdated)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit","UserAccount", new {IDNo = item.IDNo, accountType = item.AccountType })"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></a>  |
+                    <a href="@Url.Action("Details","UserAccount", new {userAccount = item })"><i class="fa fa-book fa-fw" aria-hidden="true"></i></a>  |
+                    <a href="@Url.Action("Delete","UserAccount", new {IDNo = item.IDNo })"><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
+                    @*@Html.ActionLink("Edit", "Edit", new {id = item.IDNo}) |
+                        @Html.ActionLink("Details", "Details", new {id = item.IDNo}) |
+                        @Html.ActionLink("Delete", "Delete", new {id = item.IDNo})*@
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+    
