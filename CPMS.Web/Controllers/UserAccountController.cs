@@ -33,5 +33,10 @@ namespace CPMS.Web.Controllers
             result = userAccountRep.GetInfo_ByID(IDNo, accountType, out userAccount);
             return View(userAccount);
         }
+
+        public ActionResult Create(UserAccountType accountType)
+        {
+            return View(accountType);
+        }
     }
 }
