@@ -166,6 +166,11 @@
     <Content Include="Views\UserAccount\Index.cshtml" />
     <Content Include="Views\UserAccount\Edit.cshtml" />
     <Content Include="Views\UserAccount\Create.cshtml" />
+    <Content Include="Views\Entity\Index.cshtml" />
+    <Content Include="Views\Entity\Create.cshtml" />
+    <Content Include="Views\Entity\Details.cshtml" />
+    <Content Include="Views\Entity\Edit.cshtml" />
+    <Content Include="Views\Entity\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,7 +181,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Entity\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CPMS.BL\CPMS.BL.csproj">

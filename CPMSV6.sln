@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPMS.Data", "CPMS.Data\CPMS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPMS.Rep", "CPMS.Rep\CPMS.Rep.csproj", "{49A84096-5006-408D-9248-F15EFA3964E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6FF7CF2E-AD17-46BC-913E-51FC7C4AB181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDE1CCFC-F670-47FD-8995-0914D0C4139B} = {6FF7CF2E-AD17-46BC-913E-51FC7C4AB181}
 	EndGlobalSection
 EndGlobal

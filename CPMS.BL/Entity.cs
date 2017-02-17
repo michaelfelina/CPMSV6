@@ -19,10 +19,5 @@ namespace CPMS.BL
         public DateTime? DateAdded { get; set; }
         public string UpdatedByUserGuid { get; set; }
         public DateTime? DateUpdated { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
     }
 }
