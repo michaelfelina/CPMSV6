@@ -77,3 +77,6 @@ E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\CPMS.Data.pdb
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\obj\Debug\CPMS.Web.csprojResolveAssemblyReference.cache
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\obj\Debug\CPMS.Web.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\obj\Debug\CPMS.Web.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\Common.Methods.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\StdLib.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\Common.Methods.pdb

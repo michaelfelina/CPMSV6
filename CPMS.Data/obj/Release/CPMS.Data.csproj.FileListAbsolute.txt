@@ -1,0 +1,10 @@
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\CPMS.Data.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\CPMS.Data.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\Common.Methods.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\CPMS.BL.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\StdLib.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\CPMS.BL.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Release\Common.Methods.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Release\CPMS.Data.csprojResolveAssemblyReference.cache
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Release\CPMS.Data.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Release\CPMS.Data.pdb
