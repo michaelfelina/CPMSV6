@@ -1,0 +1,12 @@
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.Rep.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.Rep.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\Common.Methods.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.BL.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.Data.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\StdLib.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.BL.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\CPMS.Data.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\bin\Release\Common.Methods.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\obj\Release\CPMS.Rep.csprojResolveAssemblyReference.cache
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\obj\Release\CPMS.Rep.dll
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Rep\obj\Release\CPMS.Rep.pdb

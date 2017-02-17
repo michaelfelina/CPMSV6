@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Methods">
-      <HintPath>..\CPMS.Web\Bin\Common.Methods.dll</HintPath>
+      <HintPath>..\Components\Common.Methods.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
