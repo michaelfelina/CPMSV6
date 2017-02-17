@@ -11,8 +11,7 @@ E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\CPMS.Data.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\CPMS.Data.pdb
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\Common.Methods.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\CPMS.BL.dll
-E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\StdLib.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\bin\Debug\CPMS.BL.pdb
-E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Debug\CPMS.Data.csprojResolveAssemblyReference.cache
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Debug\CPMS.Data.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Debug\CPMS.Data.pdb
+E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Data\obj\Debug\CPMS.Data.csprojResolveAssemblyReference.cache

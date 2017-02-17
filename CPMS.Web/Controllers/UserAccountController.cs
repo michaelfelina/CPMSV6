@@ -15,14 +15,15 @@ namespace CPMS.Web.Controllers
         // GET: UserAccount
         public ActionResult Index(UserAccountType accountType)
         {
-            var result = new OperationResult();
+            new OperationResult();
             var userAccounts = new List<UserAccount>();
-            result = userAccountRep.GetAll(accountType, out userAccounts);
+            userAccountRep.GetAll(accountType, out userAccounts);
             if (accountType == UserAccountType.Admin)
-                @ViewBag.AccountType = "Administrators";
+                @ViewBag.Title = "Administrators";
             else
-                @ViewBag.AccountType = "Cashiers";
+                @ViewBag.Title = "Cashiers";
 
+            @ViewBag.AccountType = accountType;
             return View(userAccounts);
         }
 
@@ -36,7 +37,8 @@ namespace CPMS.Web.Controllers
 
         public ActionResult Create(UserAccountType accountType)
         {
-            return View(accountType);
+            @ViewBag.AccountType = accountType;
+            return View();
         }
     }
 }
