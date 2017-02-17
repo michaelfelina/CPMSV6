@@ -64,7 +64,6 @@ E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\System.Web.Webpages.Deplo
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\System.Web.Webpages.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\System.Web.Webpages.Razor.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\CPMS.Data.dll
-E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\StdLib.dll
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\CPMS.BL.pdb
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\CPMS.Rep.pdb
 E:\Development\Project Repo\CPMSV6\CPMSV6\CPMS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

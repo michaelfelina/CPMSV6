@@ -1,20 +1,18 @@
-﻿using Common.Methods;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common.Methods;
 using Common.Methods.Enumumerators;
+using Common.Methods.Extensions;
 
-namespace CPMS.Data
+namespace CPMS.Data.common
 {
     public class DBCon
     {
-        public string ConnectionString { get; set; }
-        public SqlConnection cn { get; set; }
+        private string ConnectionString { get; set; }
+        private SqlConnection cn { get; set; }
 
         public DBCon()
         {
@@ -22,7 +20,7 @@ namespace CPMS.Data
             
         }
 
-        public OperationResult Connect()
+        private OperationResult Connect()
         {
             OperationResult result = new OperationResult();
             try
@@ -39,7 +37,7 @@ namespace CPMS.Data
             return result;
         }
 
-        public void CloseConnection()
+        private void CloseConnection()
         {
             if (cn != null)
             {
@@ -51,9 +49,8 @@ namespace CPMS.Data
 
         public OperationResult GetData(List<SqlParameter> parameters, string sProc, out DataTable dtResult)
         {
-            var result = new OperationResult();
             dtResult = null;
-            result = Connect();
+            var result = Connect();
             if (result.Success)
             {
                 dtResult = new DataTable();
@@ -61,6 +58,7 @@ namespace CPMS.Data
                 {
                     var oCmd = new SqlCommand(sProc, cn){ CommandType = CommandType.StoredProcedure };
                     dtResult = loadDataTable(parameters, oCmd);
+                    CloseConnection();
                 }
                 catch (Exception ex)
                 {
@@ -69,6 +67,95 @@ namespace CPMS.Data
                 }
             }
 
+            return result;
+        }
+
+        public OperationResult Save(List<SqlParameter> parameters, string sProc)
+        {
+            var result = new OperationResult();
+            try
+            {
+                result = Connect();
+                if (result.Success)
+                {
+                    var cmd = new SqlCommand(sProc, cn) { CommandType = CommandType.StoredProcedure };
+
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                            cmd.Parameters.Add(param);
+                    }
+                    var oParam = cmd.Parameters.Add(new SqlParameter("@DBStatus", SqlDbType.Int));
+                    oParam.Direction = ParameterDirection.Output;
+
+                    oParam = cmd.Parameters.Add(new SqlParameter("@NewID", SqlDbType.Int));
+                    oParam.Direction = ParameterDirection.Output;
+
+                    cmd.ExecuteNonQuery();
+                    if ((Status)cmd.Parameters["@DBStatus"].Value != Status.Success)
+                    {
+                        result.Success = false;
+                        result.Add("Save Failed");
+                    }
+                    CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Success = false;
+                result.Add(ex.Message);
+            }
+            return result;
+        }
+
+        public OperationResult Save(List<SqlParameter> parameters, string sProc, ref int newId)
+        {
+            var result = new OperationResult();
+            try
+            {
+                result = Connect();
+                if (result.Success)
+                {
+                    var cmd = new SqlCommand(sProc, cn) { CommandType = CommandType.StoredProcedure };
+
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                            cmd.Parameters.Add(param);
+                    }
+                    var oParam = cmd.Parameters.Add(new SqlParameter("@DBStatus", SqlDbType.Int));
+                    oParam.Direction = ParameterDirection.Output;
+
+                    oParam = cmd.Parameters.Add(new SqlParameter("@NewID", SqlDbType.Int));
+                    oParam.Direction = ParameterDirection.Output;
+
+                    cmd.ExecuteNonQuery();
+
+                    if ((Status)cmd.Parameters["@DBStatus"].Value == Status.Success)
+                    {
+                        if (newId == -1)
+                        {
+                            newId = cmd.Parameters["@NewID"].Value.ToInt();
+                            if (newId <= 0)
+                            {
+                                result.Success = false;
+                                result.Add("No ID returned from database after insert");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        result.Success = false;
+                        result.Add("Save Failed");
+                    }
+                    CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Success = false;
+                result.Add(ex.Message);
+            }
             return result;
         }
 
@@ -88,6 +175,44 @@ namespace CPMS.Data
             if ((Status)oCmd.Parameters["@DBStatus"].Value != Status.Success) dtResult = null;
 
             return dtResult;
+        }
+
+        public OperationResult Execute(List<SqlParameter> parameters, string sProc)
+        {
+            var result = new OperationResult();
+            try
+            {
+                result = Connect();
+                if (result.Success)
+                {
+                    var cmd = new SqlCommand(sProc, cn) { CommandType = CommandType.StoredProcedure };
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            cmd.Parameters.Add(param);
+                        }
+                    }
+                    var oParam = cmd.Parameters.Add(new SqlParameter("@DBStatus", SqlDbType.Int));
+                    oParam.Direction = ParameterDirection.Output;
+
+                    cmd.ExecuteNonQuery();
+
+                    if ((Status)cmd.Parameters["@DBStatus"].Value != Status.Success)
+                    {
+                        result.Success = false;
+                        result.Add("Execute Query Failed");
+                    }
+                    CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Success = false;
+                result.Add(ex.Message);
+            }
+
+            return result;
         }
     }
 

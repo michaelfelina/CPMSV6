@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Global.asax.cs">
@@ -164,6 +165,7 @@
     <Content Include="scss\_variables.scss" />
     <Content Include="Views\UserAccount\Index.cshtml" />
     <Content Include="Views\UserAccount\Edit.cshtml" />
+    <Content Include="Views\UserAccount\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -174,6 +176,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Entity\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CPMS.BL\CPMS.BL.csproj">
